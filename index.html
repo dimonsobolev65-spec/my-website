@@ -149,15 +149,14 @@
       animation: fadeUp 1.2s ease;
     }
 
-    .hero h1 {
-      font-size: 68px;
-      line-height: 1.1;
-      margin-bottom: 25px;
-      font-weight: 800;
-      background: linear-gradient(90deg, #ffffff, #00b7ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  .hero h1 {
+  background: linear-gradient(90deg, #ffffff, #00b7ff);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
 
     .hero p {
       color: #c9d1d9;
@@ -417,12 +416,87 @@
     }
 
     @media(max-width: 768px) {
+      header {
+        padding: 0;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 14px;
+      }
+
+      .logo {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .menu a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding-top: 180px;
+        min-height: auto;
+      }
+
+      .hero-content {
+        width: 100%;
+      }
+
       .hero h1 {
-        font-size: 48px;
+        font-size: 34px;
+        line-height: 1.2;
+        word-break: break-word;
       }
 
       .hero p {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 0 5px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+
+      .features,
+      .works-grid,
+      .contacts {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card,
+      .contact-card {
+        padding: 28px;
+      }
+
+      .work-card {
+        height: 240px;
+      }
+
+      .section-title {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      .section-subtitle {
+        font-size: 15px;
+        margin-bottom: 40px;
       }
 
       .menu {
